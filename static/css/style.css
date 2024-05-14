@@ -181,18 +181,21 @@ body.dark-mode {
 	background-color: white;
 	transition: 0.4s;
 	border-radius: 50%;
+}
+
+.dark-mode-toggle .slider-round:before {
 	background-image: url('../img/sun.svg');
+	background-size: cover;
+}
+
+.dark-mode-toggle input:checked+.slider-round:before {
+	transform: translateX(26px);
+	background-image: url('../img/moon.svg');
 	background-size: cover;
 }
 
 input:checked+.slider-round {
 	background-color: #007BFF;
-}
-
-input:checked+.slider-round:before {
-	transform: translateX(26px);
-	background-image: url('../img/moon.svg');
-	background-size: cover;
 }
 
 /* Footer */
