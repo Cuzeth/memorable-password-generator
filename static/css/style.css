@@ -194,3 +194,21 @@ input:checked+.slider-round:before {
 	background-image: url('./moon.svg');
 	background-size: cover;
 }
+
+/* Footer */
+footer {
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	text-align: center;
+	color: var(--text-color);
+}
+
+footer a {
+	color: var(--button-bg-color);
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
