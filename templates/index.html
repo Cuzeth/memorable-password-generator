@@ -30,6 +30,10 @@
 		<div id="resultBox">
 			<p id="result">Your password will appear here...</p>
 		</div>
+		<div class="toggle">
+			<input type="checkbox" id="darkModeToggle" name="darkModeToggle" onchange="toggleDarkMode()">
+			<label for="darkModeToggle">Dark Mode</label>
+		</div>
 	</div>
 	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>

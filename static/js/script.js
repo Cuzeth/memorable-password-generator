@@ -1,6 +1,5 @@
 function toggleSlider(checked) {
 	const slider = document.getElementById('leetifySlider');
-	const resultBox = document.getElementById('resultBox');
 	if (checked) {
 		slider.classList.add('active');
 	} else {
@@ -21,4 +20,9 @@ async function generatePassword() {
 	const resultElement = document.getElementById('result');
 	resultElement.textContent = data.result;
 	resultElement.style.visibility = 'visible';
+}
+
+function toggleDarkMode() {
+	const body = document.body;
+	body.classList.toggle('dark-mode');
 }

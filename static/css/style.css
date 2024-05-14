@@ -5,26 +5,27 @@ body {
 	align-items: center;
 	height: 100vh;
 	margin: 0;
-	background-color: #f0f0f0;
+	background-color: var(--bg-color);
+	color: var(--text-color);
 }
 
 .container {
 	text-align: center;
-	background: white;
+	background: var(--container-bg-color);
 	padding: 20px;
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-	color: #333;
+	color: var(--text-color);
 }
 
 button {
 	padding: 10px 20px;
 	font-size: 16px;
-	color: white;
-	background-color: #007BFF;
+	color: var(--button-text-color);
+	background-color: var(--button-bg-color);
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
@@ -32,7 +33,7 @@ button {
 }
 
 button:hover {
-	background-color: #0056b3;
+	background-color: var(--button-hover-bg-color);
 }
 
 .toggles {
@@ -49,7 +50,7 @@ button:hover {
 
 #resultBox {
 	margin-top: 20px;
-	background-color: #e9ecef;
+	background-color: var(--result-box-bg-color);
 	padding: 15px;
 	border-radius: 10px;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -60,7 +61,7 @@ button:hover {
 
 #result {
 	font-size: 18px;
-	color: #333;
+	color: var(--text-color);
 	font-weight: bold;
 	margin: 0;
 	visibility: hidden;
@@ -72,10 +73,9 @@ button:hover {
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
-	/* max-height: 0; */
 	opacity: 0;
 	padding: 0 0 5px 0;
-	transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
 }
 
 .slider.active {
@@ -109,4 +109,26 @@ input[type=range]::-moz-range-thumb {
 	border-radius: 50%;
 	cursor: pointer;
 	transition: background 0.3s ease;
+}
+
+/* Light mode variables */
+:root {
+	--bg-color: #f0f0f0;
+	--text-color: #333;
+	--container-bg-color: #fff;
+	--button-text-color: #fff;
+	--button-bg-color: #007BFF;
+	--button-hover-bg-color: #0056b3;
+	--result-box-bg-color: #e9ecef;
+}
+
+/* Dark mode variables */
+body.dark-mode {
+	--bg-color: #121212;
+	--text-color: #f0f0f0;
+	--container-bg-color: #1e1e1e;
+	--button-text-color: #fff;
+	--button-bg-color: #007BFF;
+	--button-hover-bg-color: #0056b3;
+	--result-box-bg-color: #333;
 }
