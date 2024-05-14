@@ -28,19 +28,72 @@ button {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 button:hover {
 	background-color: #0056b3;
 }
 
-#result {
+.toggles {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
 	margin-top: 20px;
-	font-size: 18px;
-	color: #333;
-	font-weight: bold;
 }
 
 .toggle {
+	display: flex;
+	align-items: center;
+}
+
+#resultBox {
 	margin-top: 20px;
+	background-color: #e9ecef;
+	padding: 15px;
+	border-radius: 10px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#result {
+	font-size: 18px;
+	color: #333;
+	font-weight: bold;
+	margin: 0;
+}
+
+.slider {
+	margin-top: 20px;
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+input[type=range] {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 8px;
+	background: #ddd;
+	border-radius: 5px;
+	outline: none;
+	transition: background 0.3s ease;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	background: #007BFF;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+input[type=range]::-moz-range-thumb {
+	width: 20px;
+	height: 20px;
+	background: #007BFF;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background 0.3s ease;
 }

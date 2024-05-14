@@ -12,20 +12,24 @@
 	<div class="container">
 		<h1>Memorable Password Generator</h1>
 		<button onclick="generatePassword()">Generate Password</button>
-		<div class="toggle">
-			<input type="checkbox" id="useCommon" name="useCommon">
-			<label for="useCommon">Use Common Words</label>
-		</div>
-		<div class="toggle">
-			<input type="checkbox" id="leetify" name="leetify" onchange="toggleSlider(this.checked)">
-			<label for="leetify">Leetify Words</label>
+		<div class="toggles">
+			<div class="toggle">
+				<input type="checkbox" id="useCommon" name="useCommon">
+				<label for="useCommon">Use Common Words</label>
+			</div>
+			<div class="toggle">
+				<input type="checkbox" id="leetify" name="leetify" onchange="toggleSlider(this.checked)">
+				<label for="leetify">Leetify Words</label>
+			</div>
 		</div>
 		<div class="slider" id="leetifySlider" style="display: none;">
 			<label for="leetifyProbability">Leetify Probability: <span id="sliderValue">30%</span></label>
 			<input type="range" id="leetifyProbability" name="leetifyProbability" min="0" max="100" value="30"
 				oninput="updateSliderValue(this.value)">
 		</div>
-		<p id="result"></p>
+		<div id="resultBox">
+			<p id="result"></p>
+		</div>
 	</div>
 	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
