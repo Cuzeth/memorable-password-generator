@@ -1,6 +1,11 @@
 function toggleSlider(checked) {
 	const slider = document.getElementById('leetifySlider');
-	slider.style.display = checked ? 'block' : 'none';
+	const resultBox = document.getElementById('resultBox');
+	if (checked) {
+		slider.classList.add('active');
+	} else {
+		slider.classList.remove('active');
+	}
 }
 
 function updateSliderValue(value) {
@@ -13,5 +18,7 @@ async function generatePassword() {
 	const leetifyProbability = document.getElementById('leetifyProbability').value / 100;
 	const response = await fetch(`/generate?use_common=${useCommon}&leetify=${leetify}&leetify_probability=${leetifyProbability}`);
 	const data = await response.json();
-	document.getElementById('result').textContent = data.result;
+	const resultElement = document.getElementById('result');
+	resultElement.textContent = data.result;
+	resultElement.style.visibility = 'visible';
 }

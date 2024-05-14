@@ -63,6 +63,7 @@ button:hover {
 	color: #333;
 	font-weight: bold;
 	margin: 0;
+	visibility: hidden;
 }
 
 .slider {
@@ -70,6 +71,15 @@ button:hover {
 	max-width: 300px;
 	margin-left: auto;
 	margin-right: auto;
+	overflow: hidden;
+	/* max-height: 0; */
+	opacity: 0;
+	padding: 0 0 5px 0;
+	transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.slider.active {
+	opacity: 1;
 }
 
 input[type=range] {
