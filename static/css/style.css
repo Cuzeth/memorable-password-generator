@@ -181,6 +181,8 @@ body.dark-mode {
 	background-color: white;
 	transition: 0.4s;
 	border-radius: 50%;
+	background-image: url('./sun.svg');
+	background-size: cover;
 }
 
 input:checked+.slider-round {
@@ -189,4 +191,6 @@ input:checked+.slider-round {
 
 input:checked+.slider-round:before {
 	transform: translateX(26px);
+	background-image: url('./moon.svg');
+	background-size: cover;
 }
