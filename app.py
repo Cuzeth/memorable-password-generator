@@ -49,7 +49,7 @@ def number_score(number):
         return 2
 
 # Function to select a random item from the top N items with the lowest scores
-def select_top_n(items, score_func, n=30):
+def select_top_n(items, score_func, n=1027):
     scored_items = sorted(items, key=score_func)
     return random.choice(scored_items[:n])
 
