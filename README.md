@@ -12,4 +12,4 @@ Due to limited references on Apple's previous feature and having generated only 
 ```^C```
 
 Here is the source for [5000-more-common.txt](https://github.com/MichaelWehar/Public-Domain-Word-Lists/tree/master).
-SVG sun and moon from [Redshot](https://www.reshot.com/).
+ALL SVG's from [Redshot](https://www.reshot.com/).
