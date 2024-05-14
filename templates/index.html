@@ -17,8 +17,13 @@
 			<label for="useCommon">Use Common Words</label>
 		</div>
 		<div class="toggle">
-			<input type="checkbox" id="leetify" name="leetify">
+			<input type="checkbox" id="leetify" name="leetify" onchange="toggleSlider(this.checked)">
 			<label for="leetify">Leetify Words</label>
+		</div>
+		<div class="slider" id="leetifySlider" style="display: none;">
+			<label for="leetifyProbability">Leetify Probability: <span id="sliderValue">30%</span></label>
+			<input type="range" id="leetifyProbability" name="leetifyProbability" min="0" max="100" value="30"
+				oninput="updateSliderValue(this.value)">
 		</div>
 		<p id="result"></p>
 	</div>
