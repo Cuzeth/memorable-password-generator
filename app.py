@@ -53,9 +53,18 @@ def select_top_n(items, score_func, n=1027):
     scored_items = sorted(items, key=score_func)
     return random.choice(scored_items[:n])
 
+# Function to leetify words
+def leetify(word):
+    leet_map = {
+        'a': '4', 'b': '8', 'e': '3', 'i': '1', 'l': '1',
+        'o': '0', 's': '5', 't': '7', 'g': '9'
+    }
+    return ''.join(leet_map.get(char, char) for char in word.lower())
+
 @app.route('/generate', methods=['GET'])
 def generate_password():
     use_common = request.args.get('use_common', 'false').lower() == 'true'
+    leetify_words = request.args.get('leetify', 'false').lower() == 'true'
 
     if use_common:
         # Use common words
@@ -73,6 +82,11 @@ def generate_password():
     # Select a memorable 6-digit number
     possible_numbers = [random.randint(100000, 999999) for _ in range(1000)]
     random_six_digit_number = select_top_n(possible_numbers, number_score)
+
+    # Leetify words if toggle is enabled
+    if leetify_words:
+        thirteen_letter_word = leetify(thirteen_letter_word)
+        eight_letter_word = leetify(eight_letter_word).capitalize()
 
     # Select a random special character
     special_character = random.choice(special_characters)
