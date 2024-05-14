@@ -29,17 +29,23 @@
 		<h1>Memorable Password Generator</h1>
 		<button onclick="generatePassword()">Generate Password</button>
 		<div class="toggles">
-			<div class="toggle">
-				<input type="checkbox" id="useCommon" name="useCommon">
+			<div class="switch-toggle">
+				<label class="switch">
+					<input type="checkbox" id="useCommon" name="useCommon">
+					<span class="slider-round"></span>
+				</label>
 				<label for="useCommon">Use Common Words</label>
 			</div>
-			<div class="toggle">
-				<input type="checkbox" id="leetify" name="leetify" onchange="toggleSlider(this.checked)">
+			<div class="switch-toggle">
+				<label class="switch">
+					<input type="checkbox" id="leetify" name="leetify" onchange="toggleSlider(this.checked)">
+					<span class="slider-round"></span>
+				</label>
 				<label for="leetify">Leetify Words</label>
 			</div>
 		</div>
 		<div class="slider" id="leetifySlider">
-			<label for="leetifyProbability">Leetify Probability: <span id="sliderValue">30%</span></label>
+			<label for="leetifyProbability">Leetify Amount: <span id="sliderValue">30%</span></label>
 			<input type="range" id="leetifyProbability" name="leetifyProbability" min="0" max="100" value="30"
 				oninput="updateSliderValue(this.value)">
 		</div>

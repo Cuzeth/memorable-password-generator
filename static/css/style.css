@@ -212,3 +212,25 @@ footer a {
 footer a:hover {
 	text-decoration: underline;
 }
+
+/* Additional Switch Toggles */
+.switch-toggle {
+	display: flex;
+	align-items: center;
+	margin: 10px 0;
+}
+
+.switch-toggle label {
+	margin-left: 10px;
+	color: var(--text-color);
+}
+
+.switch-toggle .slider-round:before {
+	background-image: none;
+	/* Remove sun/moon icons for additional switches */
+}
+
+input:checked+.slider-round:before {
+	transform: translateX(26px);
+	background-image: none;
+}
