@@ -9,6 +9,12 @@
 </head>
 
 <body>
+	<div class="dark-mode-toggle">
+		<label class="switch">
+			<input type="checkbox" id="darkModeToggle" name="darkModeToggle" onchange="toggleDarkMode()">
+			<span class="slider-round"></span>
+		</label>
+	</div>
 	<div class="container">
 		<h1>Memorable Password Generator</h1>
 		<button onclick="generatePassword()">Generate Password</button>
@@ -29,10 +35,6 @@
 		</div>
 		<div id="resultBox">
 			<p id="result">Your password will appear here...</p>
-		</div>
-		<div class="toggle">
-			<input type="checkbox" id="darkModeToggle" name="darkModeToggle" onchange="toggleDarkMode()">
-			<label for="darkModeToggle">Dark Mode</label>
 		</div>
 	</div>
 	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
