@@ -1,6 +1,7 @@
 import random
 import re
 from flask import Flask, jsonify, request, render_template
+import os
 
 app = Flask(__name__)
 
@@ -101,5 +102,9 @@ def generate_password():
 def index():
     return render_template('index.html')
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+if __name__ == '__main__':
+    debug_mode = os.environ.get('FLASK_DEBUG', 'false').lower() == 'true'
+    if debug_mode:
+        app.run(debug=True)
+    else:
+        app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=debug_mode)

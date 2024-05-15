@@ -20,5 +20,8 @@ else
   echo "Flask is already installed."
 fi
 
+# Development
+export FLASK_DEBUG=true
+
 # Run the Flask application
 python3 app.py
